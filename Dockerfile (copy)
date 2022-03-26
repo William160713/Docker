@@ -1,0 +1,17 @@
+FROM ubuntu
+
+MAINTAINER William
+
+
+RUN cd /
+
+ADD jdk-8u152-linux-x64.tar.gz /
+
+
+ADD apache-tomcat-7.0.82.tar.gz /
+
+
+ENV JAVA_HOME=/jdk1.8.0_152
+ENV PATH=$PATH:/jdk1.8.0_152/bin
+CMD ["/apache-tomcat-7.0.82/bin/catalina.sh", "run"]CMD ["/apache-tomcat-7.0.82/bin/catalina.sh", "run"]
+                                                       
